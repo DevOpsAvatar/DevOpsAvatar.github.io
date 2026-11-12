@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dennis Chigozirim | Cloud and DevOps portfolio</title>
+  <meta name="description" content="Dennis Chigozirim is learning DevOps, MLOps and cloud engineering, and documents every project he builds.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#projects">Skip to projects</a>
+
+  <header class="hero">
+    <p class="name">Dennis Chigozirim</p>
+    <h1>Learning cloud engineering in public.</h1>
+    <p class="intro">
+      I'm teaching myself DevOps, MLOps and cloud engineering. Every project I finish
+      is written up here, including what broke and how I fixed it.
+    </p>
+    <p class="links">
+      <a href="https://github.com/DevOpsAvatar">GitHub profile</a>
+      <a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP">Cloud projects repo</a>
+    </p>
+  </header>
+
+  <main>
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <p class="section-note">Newest first. Each entry links to its full write-up.</p>
+
+      <ol class="log">
+        <li class="entry">
+          <div class="when">
+            <time datetime="2026-11">Nov 2026</time>
+            <span class="status shipped">Shipped</span>
+          </div>
+          <article>
+            <h3>Host a website on Amazon S3</h3>
+            <p>
+              My first AWS project. I created a bucket in the Stockholm Region, uploaded a
+              website's HTML and images, and turned on static website hosting. The site
+              first returned a 403 Forbidden error because the files were private, and I
+              fixed it by making the ACL public.
+            </p>
+            <p class="tools">Amazon S3, static website hosting, ACLs, bucket endpoints</p>
+            <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/aws-host-a-website-on-s3">Read the write-up</a></p>
+          </article>
+        </li>
+
+        <li class="entry next">
+          <div class="when">
+            <span class="status upnext">Up next</span>
+          </div>
+          <article>
+            <h3>The next project goes here</h3>
+            <p>
+              New entries are added as each project is finished, with the same format:
+              what I built, the tools I used, what went wrong, and what I learned.
+            </p>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="about-title" class="about">
+      <h2 id="about-title">About</h2>
+      <p>
+        I'm studying toward a career in DevOps, MLOps and cloud engineering through a
+        multi-year self-study plan. I build small, hands-on projects, document them
+        clearly, and keep the work public so my progress is easy to check.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with plain HTML and CSS, hosted free on GitHub Pages.</p>
+  </footer>
+</body>
+</html>

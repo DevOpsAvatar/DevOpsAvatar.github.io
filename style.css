@@ -59,8 +59,24 @@ footer {
 /* Hero */
 .hero { padding: clamp(3rem, 10vw, 7rem) 0 clamp(2.5rem, 7vw, 4.5rem); }
 
+.id {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.dp {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--teal);
+  flex: none;
+}
+
 .name {
-  margin: 0 0 1.25rem;
+  margin: 0;
   font-family: var(--display);
   font-weight: 500;
   font-size: 1.125rem;

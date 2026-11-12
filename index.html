@@ -38,6 +38,25 @@
             <span class="status shipped">Shipped</span>
           </div>
           <article>
+            <h3>Build a Kubernetes controller</h3>
+            <p>
+              I built a custom controller that keeps an EchoServer resource at its desired
+              state. When I scaled the Deployment down by hand with kubectl, the controller
+              noticed the drift and scaled it back to 3 replicas. I also made it report its
+              status back to the API server. The hardest part was debugging a Go version
+              mismatch and SchemeBuilder registration errors.
+            </p>
+            <p class="tools">Kubebuilder, Go, kind, kubectl, CRDs, reconciliation loops</p>
+            <p><a href="https://github.com/DevOpsAvatar/lab/tree/main/build-a-kubernetes-controller">Read the write-up</a></p>
+          </article>
+        </li>
+
+        <li class="entry">
+          <div class="when">
+            <time datetime="2026-11">Nov 2026</time>
+            <span class="status shipped">Shipped</span>
+          </div>
+          <article>
             <h3>Host a website on Amazon S3</h3>
             <p>
               My first AWS project. I created a bucket in the Stockholm Region, uploaded a

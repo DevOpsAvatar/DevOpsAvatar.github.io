@@ -42,6 +42,25 @@
             <span class="status shipped">Shipped</span>
           </div>
           <article>
+            <h3>Launch a Kubernetes cluster on Amazon EKS</h3>
+            <p>
+              I launched an EKS cluster with eksctl from an EC2 instance, tracked the build
+              in CloudFormation, and gave myself access with an IAM access entry. Two IAM
+              permission errors along the way taught me how eksctl, IAM roles and node
+              groups fit together. When I deleted the worker nodes, the node group replaced
+              them on its own. I deleted all the resources the same day to avoid charges.
+            </p>
+            <p class="tools">Amazon EKS, eksctl, CloudFormation, IAM, EC2, kubectl</p>
+            <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/launch-a-kubernetes-cluster">Read the write-up</a></p>
+          </article>
+        </li>
+
+        <li class="entry">
+          <div class="when">
+            <time datetime="2026-11">Nov 2026</time>
+            <span class="status shipped">Shipped</span>
+          </div>
+          <article>
             <h3>Build a Kubernetes controller</h3>
             <p>
               I built a custom controller that keeps an EchoServer resource at its desired

@@ -47,8 +47,8 @@
               I created a three-node EKS cluster with eksctl, cloned a Flask backend, built
               its Docker image and pushed it to Amazon ECR so the cluster can pull it. A
               Docker permissions error taught me how the docker group controls access to the
-              Docker daemon, and a hanging terminal during the CloudFormation build taught me
-              to check the stack in the console instead of waiting.
+              Docker daemon, and the hardest part was troubleshooting a terminal that hung
+              while waiting on CloudFormation.
             </p>
             <p class="tools">Amazon EKS, ECR, Docker, Flask, eksctl, kubectl, CloudFormation</p>
             <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/set-up-kubernetes-deployment">Read the write-up</a></p>

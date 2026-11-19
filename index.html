@@ -42,6 +42,25 @@
             <span class="status shipped">Shipped</span>
           </div>
           <article>
+            <h3>Deploy a backend with Kubernetes</h3>
+            <p>
+              I deployed my Flask backend to an EKS cluster by applying a Deployment and a
+              Service manifest with kubectl. In the EKS console I followed a pod's events from
+              scheduling, to pulling the image from Amazon ECR, to starting the container, which
+              confirmed the cluster could authenticate with ECR and run the app without errors.
+              I deleted the cluster, nodes and ECR repository afterwards to avoid charges.
+            </p>
+            <p class="tools">Kubernetes, kubectl, Amazon EKS, ECR, Docker, IAM</p>
+            <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/deploy-backend-with-kubernetes">Read the write-up</a></p>
+          </article>
+        </li>
+
+        <li class="entry">
+          <div class="when">
+            <time datetime="2026-11">Nov 2026</time>
+            <span class="status shipped">Shipped</span>
+          </div>
+          <article>
             <h3>Create Kubernetes manifests</h3>
             <p>
               I wrote the Deployment and Service manifests that run my Flask backend on EKS.

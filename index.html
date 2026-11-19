@@ -42,6 +42,25 @@
             <span class="status shipped">Shipped</span>
           </div>
           <article>
+            <h3>Create Kubernetes manifests</h3>
+            <p>
+              I wrote the Deployment and Service manifests that run my Flask backend on EKS.
+              The Deployment pulls the Docker image from Amazon ECR and keeps the pods running,
+              and a NodePort Service routes traffic on port 8080 to them by label. Annotating
+              the Deployment section by section taught me what spec, selector and template do.
+              Next I want to learn rolling updates and liveness and readiness probes.
+            </p>
+            <p class="tools">Kubernetes manifests, Deployments, Services, Amazon EKS, ECR, Docker</p>
+            <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/create-kubernetes-manifests">Read the write-up</a></p>
+          </article>
+        </li>
+
+        <li class="entry">
+          <div class="when">
+            <time datetime="2026-11">Nov 2026</time>
+            <span class="status shipped">Shipped</span>
+          </div>
+          <article>
             <h3>Set up a Kubernetes deployment on EKS</h3>
             <p>
               I created a three-node EKS cluster with eksctl, cloned a Flask backend, built

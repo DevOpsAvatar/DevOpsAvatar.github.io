@@ -3,179 +3,393 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dennis Chigozirim | Cloud and DevOps portfolio</title>
-  <meta name="description" content="Dennis Chigozirim is learning DevOps, MLOps and cloud engineering, and documents every project he builds.">
+  <title>Dennis Chigozirim | Aspiring Cloud and DevOps Engineer</title>
+  <meta name="description" content="Dennis Chigozirim is an aspiring cloud and DevOps engineer building hands-on projects on AWS and Kubernetes and documenting every one publicly.">
+  <meta name="theme-color" content="#0b7a78">
+  <meta property="og:title" content="Dennis Chigozirim | Aspiring Cloud and DevOps Engineer">
+  <meta property="og:description" content="Hands-on AWS and Kubernetes projects, each with a public write-up covering what broke and how it was fixed.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devopsavatar.github.io/">
+  <meta property="og:image" content="https://devopsavatar.github.io/dp.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a78'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='white'%3EDC%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-  <a class="skip" href="#projects">Skip to projects</a>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <header class="hero">
-    <div class="id">
-      <img class="dp" src="dp.jpg" width="72" height="72" alt="Photo of Dennis Chigozirim">
-      <p class="name">Dennis Chigozirim</p>
+  <header class="site">
+    <div class="bar">
+      <a class="brand" href="#hero" aria-label="Dennis Chigozirim, back to top">Dennis Chigozirim</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="theme" type="button" aria-label="Switch colour theme" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+        </button>
+        <a class="btn btn-small" href="#contact">Contact me</a>
+      </div>
     </div>
-    <h1>Learning cloud engineering in public.</h1>
-    <p class="intro">
-      I'm teaching myself DevOps, MLOps and cloud engineering. Every project I finish
-      is written up here, including what broke and how I fixed it.
-    </p>
-    <p class="links">
-      <a href="https://github.com/DevOpsAvatar">GitHub profile</a>
-      <a href="https://www.linkedin.com/in/chigozirim-dennis-243ba237b/">LinkedIn profile</a>
-      <a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP">Cloud projects repo</a>
-    </p>
   </header>
 
-  <main>
-    <section id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <p class="section-note">Newest first. Each entry links to its full write-up.</p>
-
-      <ol class="log">
-        <li class="entry">
-          <div class="when">
-            <time datetime="2026-11">Nov 2026</time>
-            <span class="status shipped">Shipped</span>
-          </div>
-          <article>
-            <h3>Deploy a backend with Kubernetes</h3>
-            <p>
-              I deployed my Flask backend to an EKS cluster by applying a Deployment and a
-              Service manifest with kubectl. In the EKS console I followed a pod's events from
-              scheduling, to pulling the image from Amazon ECR, to starting the container, which
-              confirmed the cluster could authenticate with ECR and run the app without errors.
-              I deleted the cluster, nodes and ECR repository afterwards to avoid charges.
-            </p>
-            <p class="tools">Kubernetes, kubectl, Amazon EKS, ECR, Docker, IAM</p>
-            <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/deploy-backend-with-kubernetes">Read the write-up</a></p>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when">
-            <time datetime="2026-11">Nov 2026</time>
-            <span class="status shipped">Shipped</span>
-          </div>
-          <article>
-            <h3>Create Kubernetes manifests</h3>
-            <p>
-              I wrote the Deployment and Service manifests that run my Flask backend on EKS.
-              The Deployment pulls the Docker image from Amazon ECR and keeps the pods running,
-              and a NodePort Service routes traffic on port 8080 to them by label. Annotating
-              the Deployment section by section taught me what spec, selector and template do.
-              Next I want to learn rolling updates and liveness and readiness probes.
-            </p>
-            <p class="tools">Kubernetes manifests, Deployments, Services, Amazon EKS, ECR, Docker</p>
-            <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/create-kubernetes-manifests">Read the write-up</a></p>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when">
-            <time datetime="2026-11">Nov 2026</time>
-            <span class="status shipped">Shipped</span>
-          </div>
-          <article>
-            <h3>Set up a Kubernetes deployment on EKS</h3>
-            <p>
-              I created a three-node EKS cluster with eksctl, cloned a Flask backend, built
-              its Docker image and pushed it to Amazon ECR so the cluster can pull it. A
-              Docker permissions error taught me how the docker group controls access to the
-              Docker daemon, and the hardest part was troubleshooting a terminal that hung
-              while waiting on CloudFormation.
-            </p>
-            <p class="tools">Amazon EKS, ECR, Docker, Flask, eksctl, kubectl, CloudFormation</p>
-            <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/set-up-kubernetes-deployment">Read the write-up</a></p>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when">
-            <time datetime="2026-11">Nov 2026</time>
-            <span class="status shipped">Shipped</span>
-          </div>
-          <article>
-            <h3>Launch a Kubernetes cluster on Amazon EKS</h3>
-            <p>
-              I launched an EKS cluster with eksctl from an EC2 instance, tracked the build
-              in CloudFormation, and gave myself access with an IAM access entry. Two IAM
-              permission errors along the way taught me how eksctl, IAM roles and node
-              groups fit together. When I deleted the worker nodes, the node group replaced
-              them on its own. I deleted all the resources the same day to avoid charges.
-            </p>
-            <p class="tools">Amazon EKS, eksctl, CloudFormation, IAM, EC2, kubectl</p>
-            <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/launch-a-kubernetes-cluster">Read the write-up</a></p>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when">
-            <time datetime="2026-11">Nov 2026</time>
-            <span class="status shipped">Shipped</span>
-          </div>
-          <article>
-            <h3>Build a Kubernetes controller</h3>
-            <p>
-              I built a custom controller that keeps an EchoServer resource at its desired
-              state. When I scaled the Deployment down by hand with kubectl, the controller
-              noticed the drift and scaled it back to 3 replicas. I also made it report its
-              status back to the API server. The hardest part was debugging a Go version
-              mismatch and SchemeBuilder registration errors.
-            </p>
-            <p class="tools">Kubebuilder, Go, kind, kubectl, CRDs, reconciliation loops</p>
-            <p><a href="https://github.com/DevOpsAvatar/lab/tree/main/build-a-kubernetes-controller">Read the write-up</a></p>
-          </article>
-        </li>
-
-        <li class="entry">
-          <div class="when">
-            <time datetime="2026-11">Nov 2026</time>
-            <span class="status shipped">Shipped</span>
-          </div>
-          <article>
-            <h3>Host a website on Amazon S3</h3>
-            <p>
-              My first AWS project. I created a bucket in the Stockholm Region, uploaded a
-              website's HTML and images, and turned on static website hosting. The site
-              first returned a 403 Forbidden error because the files were private, and I
-              fixed it by making the ACL public.
-            </p>
-            <p class="tools">Amazon S3, static website hosting, ACLs, bucket endpoints</p>
-            <p><a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/aws-host-a-website-on-s3">Read the write-up</a></p>
-          </article>
-        </li>
-
-        <li class="entry next">
-          <div class="when">
-            <span class="status upnext">Up next</span>
-          </div>
-          <article>
-            <h3>The next project goes here</h3>
-            <p>
-              New entries are added as each project is finished, with the same format:
-              what I built, the tools I used, what went wrong, and what I learned.
-            </p>
-          </article>
-        </li>
-      </ol>
+  <main id="main">
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="lead-in">Learning cloud engineering in public.</p>
+        <h1 id="hero-title">Dennis Chigozirim</h1>
+        <p class="role">Aspiring Cloud and DevOps Engineer</p>
+        <p class="summary">
+          I build hands-on projects on AWS and Kubernetes and write up every one of them,
+          including what broke and how I fixed it.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn btn-ghost" href="#contact">Contact me</a>
+        </div>
+        <p class="social">
+          <a href="https://github.com/DevOpsAvatar">GitHub</a>
+          <a href="https://www.linkedin.com/in/chigozirim-dennis-243ba237b/">LinkedIn</a>
+          <a href="mailto:dennischigozirim129@gmail.com">Email</a>
+        </p>
+      </div>
+      <figure class="portrait">
+        <img src="dp.jpg" width="480" height="480" alt="Portrait of Dennis Chigozirim">
+      </figure>
     </section>
 
-    <section aria-labelledby="about-title" class="about">
-      <h2 id="about-title">About</h2>
-      <p>
-        I'm studying toward a career in DevOps, MLOps and cloud engineering through a
-        multi-year self-study plan. I build small, hands-on projects, document them
-        clearly, and keep the work public so my progress is easy to check.
-      </p>
+    <section id="about" class="block" aria-labelledby="about-title">
+      <div class="block-head">
+        <h2 id="about-title">About me</h2>
+      </div>
+      <div class="block-body">
+        <p class="statement">I build it, break it, then write it up.</p>
+        <p>
+          I'm a self-taught engineer working toward a career in cloud engineering, DevOps and
+          MLOps through a structured, multi-year study plan. I build hands-on projects on AWS and
+          Kubernetes, document each one publicly, and delete my cloud resources when I'm done so
+          I don't run up costs. My repositories and this page are the record of how I'm improving.
+        </p>
+        <a class="credential" href="https://www.credly.com/badges/7b38863d-0ec8-4153-b35d-7744be24d97c/public_url">
+          <img src="badges/lfs101-introduction-to-linux.png" width="72" height="72" alt="Introduction to Linux (LFS101) badge from The Linux Foundation">
+          <span>
+            <strong>Introduction to Linux (LFS101)</strong>
+            The Linux Foundation. Verify on Credly.
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section id="services" class="block" aria-labelledby="services-title">
+      <div class="block-head">
+        <h2 id="services-title">Services and technical skills</h2>
+        <p class="note">What I work with, and what I'm learning next.</p>
+      </div>
+      <div class="block-body">
+        <p class="legend" aria-label="Legend">
+          <span class="chip">Used in my projects</span>
+          <span class="chip learning">Learning now</span>
+        </p>
+
+        <dl class="skills">
+          <div class="skill">
+            <dt>Cloud platforms</dt>
+            <dd>
+              <ul class="chips" aria-label="AWS services">
+                <li class="chip">AWS EC2</li>
+                <li class="chip">AWS S3</li>
+                <li class="chip">AWS IAM</li>
+                <li class="chip">Amazon EKS</li>
+                <li class="chip">Amazon ECR</li>
+                <li class="chip learning">AWS VPC</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill">
+            <dt>Infrastructure as code</dt>
+            <dd>
+              <ul class="chips">
+                <li class="chip">AWS CloudFormation</li>
+                <li class="chip learning">Terraform</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill">
+            <dt>Containers and orchestration</dt>
+            <dd>
+              <ul class="chips">
+                <li class="chip">Docker</li>
+                <li class="chip">Kubernetes (EKS)</li>
+                <li class="chip">kubectl</li>
+                <li class="chip">eksctl</li>
+                <li class="chip">kind</li>
+                <li class="chip">Kubebuilder</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill">
+            <dt>CI/CD and GitOps</dt>
+            <dd>
+              <ul class="chips">
+                <li class="chip">Git</li>
+                <li class="chip">GitHub</li>
+                <li class="chip learning">Jenkins</li>
+                <li class="chip learning">GitHub Actions</li>
+                <li class="chip learning">Argo CD</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill">
+            <dt>Observability</dt>
+            <dd>
+              <ul class="chips">
+                <li class="chip learning">Prometheus</li>
+                <li class="chip learning">Grafana</li>
+                <li class="chip learning">Datadog</li>
+                <li class="chip learning">Amazon CloudWatch</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill">
+            <dt>Security</dt>
+            <dd>
+              <ul class="chips">
+                <li class="chip">AWS IAM</li>
+                <li class="chip">Kubernetes RBAC</li>
+                <li class="chip learning">Trivy</li>
+                <li class="chip learning">Grype</li>
+                <li class="chip learning">SBOM</li>
+                <li class="chip learning">Container hardening</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill">
+            <dt>Service mesh and networking</dt>
+            <dd>
+              <ul class="chips">
+                <li class="chip learning">Istio</li>
+                <li class="chip learning">NGINX Ingress</li>
+                <li class="chip learning">Cilium</li>
+                <li class="chip learning">Envoy</li>
+                <li class="chip learning">DNS</li>
+                <li class="chip learning">TLS (Let's Encrypt)</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill">
+            <dt>Scripting</dt>
+            <dd>
+              <ul class="chips">
+                <li class="chip">Bash</li>
+                <li class="chip">Python</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill">
+            <dt>Kubernetes ecosystem</dt>
+            <dd>
+              <ul class="chips">
+                <li class="chip learning">Helm</li>
+                <li class="chip learning">Kyverno</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="projects" class="block" aria-labelledby="projects-title">
+      <div class="block-head">
+        <h2 id="projects-title">Projects</h2>
+        <p class="note">Newest first. Each has a full write-up on GitHub, including the errors I hit.</p>
+      </div>
+      <div class="block-body">
+        <ol class="projects">
+          <li class="project">
+            <div class="project-head">
+              <h3>Deploy a backend with Kubernetes</h3>
+              <time datetime="2026-11">Nov 2026</time>
+            </div>
+            <div class="project-body">
+              <p>
+                I deployed my Flask backend to an EKS cluster by applying a Deployment and a
+                Service manifest with kubectl. In the EKS console I followed a pod's events from
+                scheduling, to pulling the image from Amazon ECR, to starting the container, which
+                confirmed the cluster could authenticate with ECR and run the app without errors.
+                I deleted the cluster, nodes and ECR repository afterwards to avoid charges.
+              </p>
+              <ul class="tags" aria-label="Tools">
+                <li>Kubernetes</li><li>kubectl</li><li>Amazon EKS</li><li>ECR</li><li>Docker</li><li>IAM</li>
+              </ul>
+              <a class="more" href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/deploy-backend-with-kubernetes">Read the write-up<span class="sr"> for Deploy a backend with Kubernetes</span></a>
+            </div>
+          </li>
+
+          <li class="project">
+            <div class="project-head">
+              <h3>Create Kubernetes manifests</h3>
+              <time datetime="2026-11">Nov 2026</time>
+            </div>
+            <div class="project-body">
+              <p>
+                I wrote the Deployment and Service manifests that run my Flask backend on EKS.
+                The Deployment pulls the Docker image from Amazon ECR and keeps the pods running,
+                and a NodePort Service routes traffic on port 8080 to them by label. Annotating
+                the Deployment section by section taught me what spec, selector and template do.
+                Next I want to learn rolling updates and liveness and readiness probes.
+              </p>
+              <ul class="tags" aria-label="Tools">
+                <li>Kubernetes manifests</li><li>Deployments</li><li>Services</li><li>Amazon EKS</li><li>ECR</li><li>Docker</li>
+              </ul>
+              <a class="more" href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/create-kubernetes-manifests">Read the write-up<span class="sr"> for Create Kubernetes manifests</span></a>
+            </div>
+          </li>
+
+          <li class="project">
+            <div class="project-head">
+              <h3>Set up a Kubernetes deployment on EKS</h3>
+              <time datetime="2026-11">Nov 2026</time>
+            </div>
+            <div class="project-body">
+              <p>
+                I created a three-node EKS cluster with eksctl, cloned a Flask backend, built
+                its Docker image and pushed it to Amazon ECR so the cluster can pull it. A
+                Docker permissions error taught me how the docker group controls access to the
+                Docker daemon, and the hardest part was troubleshooting a terminal that hung
+                while waiting on CloudFormation.
+              </p>
+              <ul class="tags" aria-label="Tools">
+                <li>Amazon EKS</li><li>ECR</li><li>Docker</li><li>Flask</li><li>eksctl</li><li>kubectl</li><li>CloudFormation</li>
+              </ul>
+              <a class="more" href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/set-up-kubernetes-deployment">Read the write-up<span class="sr"> for Set up a Kubernetes deployment on EKS</span></a>
+            </div>
+          </li>
+
+          <li class="project">
+            <div class="project-head">
+              <h3>Launch a Kubernetes cluster on Amazon EKS</h3>
+              <time datetime="2026-11">Nov 2026</time>
+            </div>
+            <div class="project-body">
+              <p>
+                I launched an EKS cluster with eksctl from an EC2 instance, tracked the build
+                in CloudFormation, and gave myself access with an IAM access entry. Two IAM
+                permission errors along the way taught me how eksctl, IAM roles and node
+                groups fit together. When I deleted the worker nodes, the node group replaced
+                them on its own. I deleted all the resources the same day to avoid charges.
+              </p>
+              <ul class="tags" aria-label="Tools">
+                <li>Amazon EKS</li><li>eksctl</li><li>CloudFormation</li><li>IAM</li><li>EC2</li><li>kubectl</li>
+              </ul>
+              <a class="more" href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/launch-a-kubernetes-cluster">Read the write-up<span class="sr"> for Launch a Kubernetes cluster on Amazon EKS</span></a>
+            </div>
+          </li>
+
+          <li class="project">
+            <div class="project-head">
+              <h3>Build a Kubernetes controller</h3>
+              <time datetime="2026-11">Nov 2026</time>
+            </div>
+            <div class="project-body">
+              <p>
+                I built a custom controller that keeps an EchoServer resource at its desired
+                state. When I scaled the Deployment down by hand with kubectl, the controller
+                noticed the drift and scaled it back to 3 replicas. I also made it report its
+                status back to the API server. The hardest part was debugging a Go version
+                mismatch and SchemeBuilder registration errors.
+              </p>
+              <ul class="tags" aria-label="Tools">
+                <li>Kubebuilder</li><li>Go</li><li>kind</li><li>kubectl</li><li>CRDs</li><li>Reconciliation loops</li>
+              </ul>
+              <a class="more" href="https://github.com/DevOpsAvatar/lab/tree/main/build-a-kubernetes-controller">Read the write-up<span class="sr"> for Build a Kubernetes controller</span></a>
+            </div>
+          </li>
+
+          <li class="project">
+            <div class="project-head">
+              <h3>Host a website on Amazon S3</h3>
+              <time datetime="2026-11">Nov 2026</time>
+            </div>
+            <div class="project-body">
+              <p>
+                My first AWS project. I created a bucket in the Stockholm Region, uploaded a
+                website's HTML and images, and turned on static website hosting. The site
+                first returned a 403 Forbidden error because the files were private, and I
+                fixed it by making the ACL public.
+              </p>
+              <ul class="tags" aria-label="Tools">
+                <li>Amazon S3</li><li>Static website hosting</li><li>ACLs</li><li>Bucket endpoints</li>
+              </ul>
+              <a class="more" href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP/tree/main/aws-host-a-website-on-s3">Read the write-up<span class="sr"> for Host a website on Amazon S3</span></a>
+            </div>
+          </li>
+        </ol>
+        <p class="more-note">More are on the way. I add each one as soon as I finish it.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="block contact" aria-labelledby="contact-title">
+      <div class="block-head">
+        <h2 id="contact-title">Contact me</h2>
+      </div>
+      <div class="block-body">
+        <p class="statement">Looking for a DevOps or cloud internship?</p>
+        <p>
+          I'm open to internships and learning opportunities, and to conversations with people
+          working in DevOps and cloud. Email is the quickest way to reach me.
+        </p>
+        <p class="contact-main">
+          <a class="btn" href="mailto:dennischigozirim129@gmail.com">dennischigozirim129@gmail.com</a>
+        </p>
+        <p class="social">
+          <a href="https://www.linkedin.com/in/chigozirim-dennis-243ba237b/">LinkedIn</a>
+          <a href="https://github.com/DevOpsAvatar">GitHub</a>
+          <a href="https://github.com/DevOpsAvatar/cloud-architecture-projects-AWS-Azure-GCP">Cloud projects repository</a>
+        </p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Built with plain HTML and CSS, hosted free on GitHub Pages.</p>
+  <footer class="site-foot">
+    <p>&copy; 2026 Dennis Chigozirim. Built with plain HTML and CSS, hosted on GitHub Pages.</p>
+    <p><a href="#hero">Back to top</a></p>
   </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.querySelector(".theme");
+      if (!btn) return;
+      var media = window.matchMedia("(prefers-color-scheme: dark)");
+      function current() {
+        var set = root.getAttribute("data-theme");
+        if (set === "light" || set === "dark") return set;
+        return media.matches ? "dark" : "light";
+      }
+      function sync() { btn.setAttribute("aria-pressed", current() === "dark" ? "true" : "false"); }
+      btn.addEventListener("click", function () {
+        var next = current() === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+        sync();
+      });
+      sync();
+    })();
+  </script>
 </body>
 </html>

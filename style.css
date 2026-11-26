@@ -223,14 +223,6 @@ main,
   padding-block: clamp(3rem, 9vw, 7rem);
 }
 
-.lead-in {
-  margin-bottom: 0.9rem;
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: 1.1rem;
-  color: var(--accent-ink);
-}
-
 h1 {
   font-family: var(--display);
   font-weight: 800;
